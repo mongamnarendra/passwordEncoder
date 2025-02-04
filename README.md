@@ -107,7 +107,7 @@ all set
 we use BCryptPasswordEncoder which uses hashing and we define number of round to be hashed 
 
 
-public Employee addEmployee(Employee e) {
+      public Employee addEmployee(Employee e) {
 		e.setPassword(encoder.encode(e.getPassword()));
 		return repo.save(e);
 	}
