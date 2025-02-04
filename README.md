@@ -13,6 +13,7 @@ public class SecurityConfig {
 
 
  // this is for removing default security provideed by the spring
+ 
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		return http
@@ -25,14 +26,14 @@ public class SecurityConfig {
 	}
 
  // this method tells that to use provided data for authentication
+ 
 	@Bean
 	public AuthenticationProvider authenticationProvider() {
 		DaoAuthenticationProvider provider = new DaoAuthenticationProvider();
 		provider.setPasswordEncoder(new BCryptPasswordEncoder(12));
 		provider.setUserDetailsService(userDetailsService);
 		return provider;
-	}
-}
+	}}
 
 
 ---------------------------------------------------------------------------------------------------------
