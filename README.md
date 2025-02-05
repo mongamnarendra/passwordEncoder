@@ -5,14 +5,15 @@ we use spring security to provide security to our website
 first we need to disable the default spring secutiy by creating securityconfig class 
   for this we have a class SecurityFilterChain 
  -------------------security config------------------ 
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-	@Autowired
+ 
+     @Configuration
+     @EnableWebSecurity
+    public class SecurityConfig {
+ 	@Autowired
 	private MyUserServiceDetails userDetailsService;
 
 
- // this is for removing default security provideed by the spring
+    // this is for removing default security provideed by the spring
  
 	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
